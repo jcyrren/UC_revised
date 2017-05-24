@@ -546,16 +546,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2Df-MZ-diI">
-                                        <rect key="frame" x="0.0" y="50" width="375" height="214.5"/>
+                                        <rect key="frame" x="0.0" y="50" width="375" height="215"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taken at:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cdf-wx-N34">
-                                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="214.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="215"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="P2x-af-68k">
-                                                <rect key="frame" x="187.5" y="0.0" width="187.5" height="214.5"/>
+                                                <rect key="frame" x="187.5" y="0.0" width="187.5" height="215"/>
                                                 <date key="date" timeIntervalSinceReferenceDate="517087638.37049401">
                                                     <!--2017-05-21 19:27:18 +0000-->
                                                 </date>
@@ -563,7 +563,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="XWs-7E-kpD">
-                                        <rect key="frame" x="0.0" y="284.5" width="375" height="30"/>
+                                        <rect key="frame" x="0.0" y="285" width="375" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Appearance: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xig-Sc-DS6">
                                                 <rect key="frame" x="0.0" y="0.0" width="187.5" height="30"/>
@@ -580,13 +580,13 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MRZ-Za-zPU">
-                                        <rect key="frame" x="0.0" y="334.5" width="375" height="49.5"/>
+                                        <rect key="frame" x="0.0" y="335" width="375" height="50"/>
                                     </stackView>
                                     <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="248" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="Nnd-nx-Unq">
-                                        <rect key="frame" x="0.0" y="404" width="375" height="180"/>
+                                        <rect key="frame" x="0.0" y="405" width="375" height="178.5"/>
                                     </imageView>
                                     <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Yj-7k-JSE">
-                                        <rect key="frame" x="0.0" y="604" width="375" height="23"/>
+                                        <rect key="frame" x="0.0" y="603.5" width="375" height="23.5"/>
                                         <items>
                                             <barButtonItem systemItem="camera" id="IC3-He-STi">
                                                 <connections>
@@ -631,7 +631,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0x1-jo-XZ1" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Triggers" image="trigger_icon" selectedImage="trigger_icon" id="lKS-eP-zCo"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="h3I-g3-E7n">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="h3I-g3-E7n">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -782,7 +782,7 @@
                 <navigationController storyboardIdentifier="MedNav" automaticallyAdjustsScrollViewInsets="NO" id="7X5-Bg-10W" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Medications" image="meds_icon" selectedImage="meds_icon" id="mxB-Ud-FKW"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="c8t-fj-f6l">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="c8t-fj-f6l">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -802,7 +802,7 @@
                 <navigationController storyboardIdentifier="NavCntrlID" automaticallyAdjustsScrollViewInsets="NO" id="2PD-gH-jlP" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Data Entry" image="icon_mainpage" selectedImage="icon_mainpage" id="BG0-s3-fz7"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="k2v-J9-EOk">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="k2v-J9-EOk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
