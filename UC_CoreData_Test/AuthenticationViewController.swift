@@ -17,8 +17,10 @@ class AuthenticationViewController: UIViewController {
     
     @IBOutlet var passwordTF: UITextField!
     
+    @IBOutlet var backgroundImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        backgroundImage.sendSubview(toBack: backgroundImage)
     }
     
     @IBAction func registerUser(_ sender: Any) {

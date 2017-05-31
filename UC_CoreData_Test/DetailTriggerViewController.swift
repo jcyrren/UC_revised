@@ -287,7 +287,7 @@ class DetailTriggerViewContoller: UIViewController, UIPickerViewDataSource, UIPi
     func setUpGraphWithData(data: [Int]) {
         graph.vals = data
         //graph.number = entries.count
-        graph.number = dates.count
+        graph.number = 10 //dates.count
         graph.maxHeight = maxHeight
         graph.setNeedsDisplay()
     }

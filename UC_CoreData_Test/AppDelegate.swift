@@ -58,6 +58,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //let mainGraphVC = navCntrl.viewControllers[0] as! MainGraphViewController
         window?.rootViewController = tabCntrl//navCntrl//mainGraphVC
     }
+    func unwindToMedTable() {
+        let tabCntrl = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarID") as! UITabBarController
+        /*let navCntrl = tabCntrl.viewControllers![2] as! UINavigationController
+         let medTable = navCntrl.viewControllers[0] as! MedsTableViewController*/
+        window?.rootViewController = tabCntrl
+        continueSetUp()
+    }
+    
+    func continueSetUp() {
+        let tab = window?.rootViewController as! UITabBarController
+        tab.selectedIndex = 2
+    }
     
     func showDetailMed(withMedName name: String, withMedData med: NSDictionary) {
         let detailMed = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailMed") as! DetailMedViewController

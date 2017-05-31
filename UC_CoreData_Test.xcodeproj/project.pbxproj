@@ -29,6 +29,7 @@
 		CE252B8C1ED21D4E00A547EA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE252B8B1ED21D4E00A547EA /* GoogleService-Info.plist */; };
 		CE252B8E1ED2429C00A547EA /* Aileron-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE252B8D1ED2429C00A547EA /* Aileron-Regular.otf */; };
 		CE252B901ED242AB00A547EA /* Aileron-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE252B8F1ED242AB00A547EA /* Aileron-Light.otf */; };
+		CED77B4D1EDD0462005252A8 /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED77B4C1EDD0462005252A8 /* LabelView.swift */; };
 		CEF969541E665EC500E605AC /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF969531E665EC500E605AC /* NotificationManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		CE252B8B1ED21D4E00A547EA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE252B8D1ED2429C00A547EA /* Aileron-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aileron-Regular.otf"; sourceTree = "<group>"; };
 		CE252B8F1ED242AB00A547EA /* Aileron-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aileron-Light.otf"; sourceTree = "<group>"; };
+		CED77B4C1EDD0462005252A8 /* LabelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelView.swift; sourceTree = "<group>"; };
 		CEF969531E665EC500E605AC /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +105,7 @@
 				84C97B101E54EA2B009DCC97 /* SettingsViewController.swift */,
 				84C97B0C1E54E9A7009DCC97 /* MainGraphViewController.swift */,
 				840C58ED1E5F721F002DC1C0 /* GraphView.swift */,
+				CED77B4C1EDD0462005252A8 /* LabelView.swift */,
 				84083C541E4399E900507710 /* MedsTableViewController.swift */,
 				84083C561E439C8900507710 /* DetailMedViewController.swift */,
 				844BEC9F1E4C02A90008E537 /* redcross.png */,
@@ -279,6 +282,7 @@
 				84C97B0D1E54E9A7009DCC97 /* MainGraphViewController.swift in Sources */,
 				840A79A31E3FBCFF00B0A3FA /* Triggers.swift in Sources */,
 				840A799F1E3FAF4500B0A3FA /* MainDataViewController.swift in Sources */,
+				CED77B4D1EDD0462005252A8 /* LabelView.swift in Sources */,
 				849773131E3D7C4B00029FFC /* UC_CoreData_Test.xcdatamodeld in Sources */,
 				840A79A11E3FBB5500B0A3FA /* TriggerTableViewController.swift in Sources */,
 				846B31E51E92AE4100494578 /* AuthenticationViewController.swift in Sources */,

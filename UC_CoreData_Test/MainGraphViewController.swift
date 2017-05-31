@@ -19,12 +19,16 @@ class MainGraphViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     var dates: [String] = []
     
     let pickerData = ["PUCAI Score", "Number of Stools", "Stool Consistency", "Nocturnal", "Rectal Bleeding", "Activity Level", "Abdominal Pain"]
+    var pickerID = "PUCAI Score"
     
     @IBOutlet var graphPicker: UIPickerView!
     
+    @IBOutlet var valPicker: UIStepper!
+    @IBOutlet var numVals: UILabel!
     @IBOutlet var graph: GraphView!
     
     var maxHeight = 85
+    var entriesShown = 7
     
     var ref: FIRDatabaseReference?
     var uid: String?
@@ -56,6 +60,7 @@ class MainGraphViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         ref = FIRDatabase.database().reference()
         
+        
         guard let currentUserID = appDelegate.uid else {
             self.uid = nil
             return
@@ -68,6 +73,13 @@ class MainGraphViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         graphPicker.dataSource = self
         graphPicker.delegate = self
         
+        
+        valPicker.wraps = true
+        valPicker.autorepeat = true
+        valPicker.minimumValue = 2
+        //valPicker.maximumValue = 100 //Double(entries!.allKeys.count)
+        valPicker.value = 7
+        numVals.text = "7"
         //setUpGraphWithData(data: pucaiArray())
     }
     
@@ -101,6 +113,9 @@ class MainGraphViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             } else {
                print("ERROR: no entries /n Cannot make graph until data is entered")
             }
+            self.valPicker.maximumValue = Double(self.entries!.allKeys.count - 1)
+            print("****  \(self.entries!.allKeys.count)")
+            print("****  \(self.valPicker.maximumValue)")
             
             //self.entries = snapshot as NSDictionary
             /*guard self.entries!.count > 0 else {
@@ -128,6 +143,7 @@ class MainGraphViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             //dates.append(myFormatter.string(from: date as! Date))
             dates.append(date as! String)
         }
+        self.valPicker.maximumValue = Double(self.entries!.allKeys.count - 1)
         setUpGraphWithData(data: pucaiArray())
         return dates
     }
@@ -219,10 +235,37 @@ class MainGraphViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         maxHeight = 2
         return stoolConsistency
     }
+    @IBAction func entriesChanged(_ sender: Any) {
+        entriesShown = Int(valPicker.value)
+        numVals.text = String(entriesShown)
+        
+        
+        
+        switch (pickerID) {
+        case "PUCAI Score":
+            setUpGraphWithData(data: pucaiArray())
+        case "Stool Consistency":
+            setUpGraphWithData(data: consistencyArray())
+        case "Activity Level":
+            setUpGraphWithData(data: pucaiArray())
+        case "Number of Stools":
+            setUpGraphWithData(data: numStoolsArray())
+        case "Abdominal Pain":
+            setUpGraphWithData(data: abdPainArray())
+        case "Rectal Bleeding":
+            setUpGraphWithData(data: bleedingArray())
+        case "Nocturnal":
+            setUpGraphWithData(data: nocturnalArray())
+        default:
+            break
+        }
+        
+    }
     
     func setUpGraphWithData(data: [Int]) {
         graph.vals = data
-        graph.number = entries!.allKeys.count
+        graph.number = entriesShown
+        
         graph.maxHeight = maxHeight
         graph.dates = dates
         graph.setNeedsDisplay()
@@ -249,7 +292,7 @@ class MainGraphViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         // The parameter named row and component represents what was selected.
         
         let identifier = pickerData[row]
-        
+        pickerID = identifier
         switch (identifier) {
         case "PUCAI Score":
             setUpGraphWithData(data: pucaiArray())

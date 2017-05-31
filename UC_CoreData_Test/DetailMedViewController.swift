@@ -106,7 +106,7 @@ class DetailMedViewController: UIViewController, UITextFieldDelegate, UINavigati
         
         self.key = med.object(forKey: "imageKey") as? String
         
-        self.medTime = (med.object(forKey: "medTime") as? Date)!
+        //self.medTime = (med.object(forKey: "medTime") as? Date)!
         
         
         let dose: Double = self.medDose ?? 0.0
@@ -143,6 +143,8 @@ class DetailMedViewController: UIViewController, UITextFieldDelegate, UINavigati
         
         imagePicker.delegate = self
         timeTaken.date = medTime
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .done, target: self, action: #selector(self.backToInitial(sender:)))
 
     }
     
@@ -325,6 +327,11 @@ class DetailMedViewController: UIViewController, UITextFieldDelegate, UINavigati
         
         return fixedDate
         
+    }
+    
+    func backToInitial(sender: AnyObject) {
+        let appDelegate = (UIApplication.shared.delegate) as! AppDelegate
+        appDelegate.unwindToMedTable()
     }
     
 }
